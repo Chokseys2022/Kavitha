@@ -8,13 +8,13 @@
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
-  background-color: lightgray;
+  background-color: rgb(249, 199, 92);
   color: #333;
 }
 
 /* Navbar Styles */
 .navbar-top {
-  background-color: #333;
+  background-color: #4e0404;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -58,7 +58,7 @@ body {
 
 /* Button Styles */
 .button {
-  background-color: #ffcc00;
+  background-color: rgb(249, 199, 92);
   color: white;
   padding: 12px 24px;
   border-radius: 5px;
@@ -105,7 +105,7 @@ body {
 .section-events,
 .section-testimonials {
   padding: 40px 20px;
-  background-color: #ffffff;
+  background-color:blanchedalmond;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
   width: 95vw;
@@ -113,6 +113,9 @@ body {
   margin-right: 1.5vw;
   align-items: center;
   text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(74, 1, 1, 0.2) 5px 5px 5px 1px;
+
 }
 
 .section-title {
