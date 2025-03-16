@@ -12,6 +12,19 @@ body {
   color: #333; /* Dark grey text for readability */
 }
 
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apply padding to the top of all sections */
+#home, #about, #events, #menu, #order {
+  padding-top: 80px; /* Adjust as necessary */
+}
+
+
+
 /* Headings */
 /* Applies the custom font and letter-spacing to all heading elements */
 h1,
