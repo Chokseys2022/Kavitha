@@ -86,9 +86,6 @@ body {
   object-position: 50% 20%; /* Adjusts focus */
 }
 
-
-
-
 .header-text-bottomleft {
   position: absolute;
   bottom: 20px;
@@ -96,6 +93,11 @@ body {
   color: white;
   font-size: 40px;
   font-weight: bold;
+}
+.menu-item-image {
+  width: 450px; /* Adjust the width as needed */
+  height: auto;
+  margin-top: 10px;
 }
 
 /* Section Styles */
@@ -105,7 +107,7 @@ body {
 .section-events,
 .section-testimonials {
   padding: 40px 20px;
-  background-color:blanchedalmond;
+  background-color: blanchedalmond;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
   width: 95vw;
@@ -115,7 +117,6 @@ body {
   text-align: center;
   border-radius: 5px;
   box-shadow: rgba(74, 1, 1, 0.2) 5px 5px 5px 1px;
-
 }
 
 .section-title {
