@@ -1,0 +1,344 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders do not affect element size */
+  }
+  
+  body {
+    font-family: "Times New Roman", Georgia, Serif; /* Sets the body font to a serif family */
+    line-height: 1.6; /* Increases line height for better readability */
+    background-color: #4e0404; /* Dark red background color for the website */
+    color: #333; /* Dark grey text for readability */
+  }
+  
+  /* Headings */
+  /* Applies the custom font and letter-spacing to all heading elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display"; /* Elegant font for headings */
+    letter-spacing: 5px; /* Increases spacing between letters in headings */
+  }
+  
+  /* Navbar Styles */
+  .navbar-top {
+    background-color: #4e0404; /* Matches the website background color */
+    position: sticky; /* Keeps navbar at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Ensures the navbar stretches across the full width of the page */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Distributes space between navbar items */
+    align-items: center;
+    padding: 16px 30px;
+    color: white;
+  }
+  
+  .navbar-item:hover {
+    color: white; /* Makes navbar items white on hover */
+  }
+  
+  /* Mobile-First Media Queries */
+  @media (max-width: 768px) {
+    /* Hides the navbar menu items on smaller screens */
+    .navbar-right {
+      display: none; 
+    }
+  
+    /* Shows the navbar items when the menu is toggled */
+    .navbar-right.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: #333;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    /* Styles for navbar items */
+    .navbar-right .navbar-item {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    /* Makes sections stack vertically on smaller screens */
+    .section-about,
+    .section-menu,
+    .section-events,
+    .section-catering,
+    .section-order {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .section-image {
+      width: 100%; /* Image takes full width on small screens */
+      margin-bottom: 30px;
+    }
+  
+    .section-content {
+      width: 100%; /* Content takes full width on small screens */
+    }
+  
+    /* Adjust section title font size for mobile */
+    .section-title {
+      font-size: 30px;
+    }
+  
+    /* Adjust large text font size for mobile */
+    .large-text {
+      font-size: 16px;
+    }
+  
+    /* Adjust the width of menu items */
+    .menu-item {
+      width: 80%; /* Items take up more space on small screens */
+    }
+  
+    /* Adjust the size of menu item text */
+    .menu-item h4 {
+      font-size: 20px;
+    }
+  
+    .menu-item p {
+      font-size: 14px;
+    }
+  
+    /* Adjust the width of event columns */
+    .event-column {
+      width: 80%;
+    }
+  
+    .event-column h3 {
+      font-size: 20px;
+    }
+  
+    .event-column p {
+      font-size: 14px;
+    }
+  
+    footer {
+      padding: 20px 10px;
+      max-width: 100%;
+    }
+  
+    footer p,
+    footer a {
+      font-size: 14px;
+    }
+  }
+  
+  /* Button Styles */
+  .button {
+    background-color: rgb(249, 199, 92); /* Light yellow background */
+    color: #6d3804; /* Dark brown text */
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  /* Header Section */
+  .header-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 75% 55%; /* Adjusts the focus of the image */
+  }
+  
+  .header-text-bottomleft {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  /* Common Section Styles */
+  .section-about,
+  .section-menu,
+  .section-events,
+  .section-catering,
+  .section-order {
+    padding: 40px 20px;
+    background-color: rgb(248, 239, 226);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    width: 95vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(74, 1, 1, 0.2) 5px 5px 5px 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #e07a5f; /* Light brown color for the title */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Large Text */
+  .large-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Menu Section */
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .menu-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .menu-item h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .menu-item-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  /* Event Sections */
+  .events-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .event-column {
+    width: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .event-column h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .event-column p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Contact Form */
+  .contact-container {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .input-field:focus {
+    border-color: #ffcc00;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #ffcc00;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4e0404;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  footer a:hover {
+    color: #e6b800;
+  }
+  
+  
+  
